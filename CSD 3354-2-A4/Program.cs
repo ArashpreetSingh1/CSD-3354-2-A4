@@ -20,7 +20,7 @@ namespace CSD_3354_2_A4
             Task.Run(() =>
             {
                 Thread.Sleep(3000);
-                Console.WriteLine("Download Complete"); 
+                Console.WriteLine("Download Complete "); 
             });
         }
     }
