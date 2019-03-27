@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace CSD_3354_2_A4
 {
@@ -17,8 +18,9 @@ namespace CSD_3354_2_A4
         }
         static async void Download()
         {
-            await Network.Download();
-            Console.WriteLine("Download Complete");
+            HttpClient client = new HttpClient();
+            var data = await client.GetStringAsync("http://rouxacademy.com");
+            Console.WriteLine("Download Complete" + data);
         }
     }
     class Network
@@ -31,7 +33,8 @@ namespace CSD_3354_2_A4
             });
         }
     }
-        
-        
+
+
 }
+
 
