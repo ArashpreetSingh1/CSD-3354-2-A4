@@ -17,9 +17,12 @@ namespace CSD_3354_2_A4
         }
         static void Download()
         {
-            Thread.Sleep(3000);
-            Console.WriteLine("Download Complete");
-        }
+            Task.Run(() =>
+            {
+                Thread.Sleep(3000);
+                Console.WriteLine("Download Complete");
+            });
         }
     }
+}
 
