@@ -16,7 +16,7 @@ namespace CSD_3354_2_A4
         public void Hit()
         {
             Random r = new Random();
-            health -= r.Next(5, 50);
+            health -= r.Next(5, 50 );
         }
 
         public void CheckDeath()
